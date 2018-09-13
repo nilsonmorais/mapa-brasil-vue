@@ -8,3 +8,5 @@
 
 - mapa-brasil -> data -> showInfoBox: true|false (default: false)
 - mapa-brasil -> data -> showCircleInfo: true|false (default: false)
+
+![](hello.gif)
