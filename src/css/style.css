@@ -1,0 +1,151 @@
+body {
+	background: #ffffff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	--default-fill: #c9c9c9;
+	--default-grey: #212121;
+	--default-blue-stroke: #03A9F4;
+    --default-grey-black-fill: #48739e;
+    --default-stroke: #fff;
+    --default-success-bg: #4CAF50;
+    --default-success-stroke: #2E7D32;
+    --default-warning: #FF9800;
+    --default-orange: #FF5722;
+    --default-danger: #F44336;
+}
+
+.bg-success {
+	background-color: var(--default-success-bg) !important;
+	fill: var(--default-success-bg) !important;
+	stroke: var(--default-success-stroke) !important;
+}
+
+svg text{
+	fill: var(--default-stroke);
+	font-family: monospace;
+	font-weight: bolder;
+}
+.mapa-svg-estados {
+	fill: var(--default-fill);
+	-webkit-transition: .8s ease;
+	-moz-transition: .8s ease;
+	-ms-transition: .8s ease;
+	-o-transition: .8s ease;
+	transition: .8s ease;
+	stroke-dasharray: 180%;
+	stroke-dashoffset: -120%;
+	stroke-width: 2px;
+	stroke: var(--default-stroke);
+}
+.regional-active {
+	fill: var(--default-grey-black-fill);
+	-webkit-transition: .8s ease;
+	-moz-transition: .8s ease;
+	-ms-transition: .8s ease;
+	-o-transition: .8s ease;
+	transition: .8s ease;
+	stroke-dasharray: 180%;
+	stroke-dashoffset: -120%;
+	stroke-width: 2px;
+	/*stroke: var(--default-stroke);*/
+}
+.mapa-svg-estados text {
+	stroke:none
+}
+
+.mapa-svg-estados:hover {
+	cursor: pointer;
+	fill: var(--default-grey-black-fill);
+
+}
+
+.mapa-svg-estados-active {
+	cursor: pointer;
+	stroke: var(--default-blue-stroke);
+	fill: var(--default-grey-black-fill);
+	stroke-dashoffset: 0%;
+	transition: .8s ease;
+	-webkit-transition: .8s ease;
+	-moz-transition: .8s ease;
+	-ms-transition: .8s ease;
+	-o-transition: .8s ease;
+}
+.mapa-svg-estados-active text{
+	stroke: none;
+}
+
+.pointer-svg-map {
+	fill: var(--default-blue-stroke);
+	animation-direction: normal;
+	animation-delay: .3s;
+}
+
+.inactive-map-svg {
+	opacity: .5;
+	stroke: none !important;
+}
+
+.inactive-map-svg:hover {
+	stroke-dashoffset: -120%;
+	cursor: inherit;
+	fill: var(--default-grey-black-fill);
+}
+
+@keyframes pointer {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0px);
+	}
+}
+
+#sotreq-select {
+	display: flex;
+	flex-direction: column;
+}
+
+.class-select {
+	outline: none;
+	height: 40px;
+	width: 250px;
+	padding: 10px 18px;
+	border-radius: 32px;
+	color: #3c3c3c;
+	margin-bottom: 2rem;
+}
+.abreviation-state {font-size: 15px;}
+.sphere {
+	fill: transparent;
+}
+.mapa-svg-estados-active .semaforo{
+	font-weight: bold;
+	fill: var(--default-stroke);
+	stroke: none;
+	font-family: monospace;
+	font-size: 11px;
+}
+.sphere.active{
+	stroke: var(--default-blue-stroke);
+	fill: var(--default-grey-black-fill);
+	stroke-width: 2px;
+}
+#info-box {
+	position: absolute;
+  z-index: 1;
+  background-color: var(--default-fill);
+  border: 2px solid var(--default-blue-stroke);
+  border-radius: 5px;
+	padding: 5px;
+	opacity: 0.8;
+}
+#info-box ul {
+	list-style: none;
+	padding: 0px 10px;
+	line-height: 1.5;
+	font-family: Roboto, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+}
